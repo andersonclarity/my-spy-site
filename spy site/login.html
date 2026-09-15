@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In | Discreetspy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="auth-page">
+      <div class="auth-shell">
+        <div class="auth-visual">
+          <div class="brand" aria-label="Discreetspy home">
+            <span class="brand-mark">S</span>
+            <span class="brand-text">Discreetspy</span>
+          </div>
+          <h1>Welcome back to your secure dashboard.</h1>
+          <p>Track messages, locations, calls, and social activity from one clean control center.</p>
+
+          <div class="auth-metrics">
+            <div class="auth-metric">
+              <strong>4.9/5</strong>
+              <span>User rating</span>
+            </div>
+            <div class="auth-metric">
+              <strong>12k+</strong>
+              <span>Active users</span>
+            </div>
+            <div class="auth-metric">
+              <strong>1-click</strong>
+              <span>Quick access</span>
+            </div>
+            <div class="auth-metric">
+              <strong>Secure</strong>
+              <span>Encrypted account</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-form-wrap">
+          <h2>Log in</h2>
+          <p class="auth-subtitle">Access your monitoring dashboard.</p>
+
+          <div class="suggestion-cluster" aria-label="Login steps">
+            <button type="button" class="suggestion-pill active" aria-label="Step 1">1</button>
+            <button type="button" class="suggestion-pill" aria-label="Step 2">2</button>
+            <button type="button" class="suggestion-pill" aria-label="Step 3">3</button>
+          </div>
+
+          <form class="auth-form" action="dashboard.html">
+            <div class="field">
+              <label for="login-email">Email address</label>
+              <input id="login-email" name="login-email" type="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="field">
+              <label for="login-password">Password</label>
+              <input id="login-password" name="login-password" type="password" placeholder="Enter your password" />
+            </div>
+
+            <label class="checkbox">
+              <input type="checkbox" name="remember" />
+              <span>Remember this device</span>
+            </label>
+
+            <button type="submit" class="primary-btn">Log in</button>
+          </form>
+
+          <p class="auth-footer">Don’t have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

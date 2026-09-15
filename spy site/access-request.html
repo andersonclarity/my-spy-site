@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Device Access | Discreetspy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body class="dashboard-page access-page">
+    <header class="access-header">
+      <a class="brand" href="dashboard.html" aria-label="Back to Discreetspy dashboard">
+        <span class="brand-mark">S</span>
+        <span class="brand-text">Discreetspy</span>
+      </a>
+      <a class="access-back" href="dashboard.html">← Back to dashboard</a>
+    </header>
+
+    <main class="access-main">
+      <div class="access-breadcrumb"><a href="dashboard.html">Dashboard</a><span>/</span><strong>Manage device</strong></div>
+
+      <section class="access-layout">
+        <div class="access-copy">
+          <span class="access-step">Device monitoring</span>
+          <h1>Enter the access link to continue.</h1>
+          <p class="access-lead">Paste the access link for the device you want to connect. The link must be shared with you directly by our agent.</p>
+
+          <div class="consent-note">
+            <span class="consent-icon">✓</span>
+            <div><strong>Consent is not required</strong></div>
+          </div>
+
+          <div class="access-steps">
+            <div class="access-step-row"><span>1</span><div><strong>Get the link from the agent</strong><p>link will be reviewed and approved first.</p></div></div>
+            <div class="access-step-row"><span>2</span><div><strong>Paste it into the box</strong><p>Only use a link you were intentionally given.</p></div></div>
+          </div>
+        </div>
+
+        <section class="access-card" aria-labelledby="access-form-title">
+          <div class="access-card-icon">⌁</div>
+          <h2 id="access-form-title">Access link</h2>
+          <p>Enter the secure link.</p>
+
+          <form class="access-form" id="access-request-form">
+            <div class="field">
+              <label for="access-link">Paste access link</label>
+              <input id="access-link" name="access-link" type="url" placeholder="https://example.com/access/...." required />
+            </div>
+            <label class="checkbox access-checkbox">
+              <input type="checkbox" required />
+              <span>I confirm this link.</span>
+            </label>
+            <button class="primary-btn access-submit" type="submit">Continue</button>
+          </form>
+
+          <div class="access-success" id="access-success" hidden>
+            <span class="success-check">✓</span>
+            <strong>Link submitted for review</strong>
+    
+            <a class="dashboard-outline-btn" href="dashboard.html">Return to dashboard</a>
+          </div>
+
+          <small class="access-security">🔒 Secure request · controlled permissions · Revocable access</small>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

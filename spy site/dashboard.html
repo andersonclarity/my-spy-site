@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Discreetspy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body class="dashboard-page">
+    <div class="dashboard-layout">
+      <aside class="dashboard-sidebar">
+        <a class="brand dashboard-brand" href="index.html" aria-label="Discreetspy home">
+          <span class="brand-mark">S</span>
+          <span class="brand-text">Discreetspy</span>
+        </a>
+
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+          <a class="active" href="dashboard.html"><span>▦</span> Overview</a>
+          <a href="#activity"><span>◷</span> Activity</a>
+          <a href="#location"><span>⌖</span> Location</a>
+          <a href="#devices"><span>▣</span> Devices</a>
+          <a href="#settings"><span>⚙</span> Settings</a>
+        </nav>
+
+        <div class="sidebar-help">
+          <strong>Need help?</strong>
+          <p>Our support team is available around the clock.</p>
+          <a href="mailto:support@discreetspy.com">Contact support</a>
+        </div>
+
+        <a class="dashboard-logout" href="index.html">↪ Log out</a>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div>
+            <p class="dashboard-kicker">Overview</p>
+            <h1>Good morning, welcome back.</h1>
+            <p class="dashboard-muted">Here is what is happening across your connected devices.</p>
+          </div>
+          <div class="dashboard-user">
+            <span class="notification-dot">3</span>
+            <span class="user-avatar"></span>
+            <span class="user-name"></span>
+            <span class="user-chevron">⌄</span>
+          </div>
+        </header>
+
+        <section class="device-strip" id="devices">
+          <div class="device-strip-copy">
+            <span class="device-offline"></span>
+            <div>
+              <strong>Add a device</strong>
+              <span>No device connected</span>
+            </div>
+          </div>
+          <div class="device-strip-meta">
+            <span class="battery-icon">—</span>
+            <span>—</span>
+            <a class="dashboard-outline-btn" href="access-request.html">Manage device</a>
+          </div>
+        </section>
+
+        <section class="dashboard-stats" aria-label="Activity summary">
+          <article class="dashboard-stat-card">
+            <div class="stat-card-top"><span class="dashboard-stat-icon blue">✉</span><span class="trend neutral">—</span></div>
+            <span class="dashboard-stat-label">Messages</span>
+            <strong>0</strong>
+            <span class="dashboard-stat-note">No data yet</span>
+          </article>
+          <article class="dashboard-stat-card">
+            <div class="stat-card-top"><span class="dashboard-stat-icon purple">◉</span><span class="trend neutral">—</span></div>
+            <span class="dashboard-stat-label">Calls</span>
+            <strong>0</strong>
+            <span class="dashboard-stat-note">No data yet</span>
+          </article>
+          <article class="dashboard-stat-card">
+            <div class="stat-card-top"><span class="dashboard-stat-icon orange">⌖</span><span class="trend neutral">—</span></div>
+            <span class="dashboard-stat-label">Locations visited</span>
+            <strong>0</strong>
+            <span class="dashboard-stat-note">No locations yet</span>
+          </article>
+          <article class="dashboard-stat-card alert-stat">
+            <div class="stat-card-top"><span class="dashboard-stat-icon red">!</span><span class="trend neutral">—</span></div>
+            <span class="dashboard-stat-label">Alerts</span>
+            <strong>0</strong>
+            <span class="dashboard-stat-note">No alerts</span>
+          </article>
+        </section>
+
+        <section class="dashboard-content-grid">
+          <article class="dashboard-panel activity-panel" id="activity">
+            <div class="dashboard-panel-header">
+              <div><h2>Activity overview</h2><p>Device activity during the last 7 days</p></div>
+              <select aria-label="Activity period"><option>Last 7 days</option><option>Last 30 days</option></select>
+            </div>
+            <div class="activity-chart" aria-label="Activity chart">
+              <div class="chart-y-labels"><span>300</span><span>200</span><span>100</span><span>0</span></div>
+              <div class="chart-area">
+                <div class="chart-lines"><span></span><span></span><span></span><span></span></div>
+                <div class="chart-bars"><i style="height: 0%"></i><i style="height: 0%"></i><i style="height: 0%"></i><i style="height: 0%"></i><i style="height: 0%"></i><i style="height: 0%"></i><i style="height: 0%"></i></div>
+                <div class="chart-x-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+              </div>
+            </div>
+            <div class="chart-legend"><span><i class="legend-blue"></i>Messages: 0</span><span><i class="legend-orange"></i>Calls: 0</span><span class="chart-total">Total activity <strong>0</strong></span></div>
+          </article>
+
+          <article class="dashboard-panel location-panel" id="location">
+            <div class="dashboard-panel-header"><div><h2>Current location</h2><p>No location data yet</p></div><button class="icon-button" type="button" aria-label="More location options">•••</button></div>
+            <div class="map-preview">
+              <span class="map-road road-one"></span><span class="map-road road-two"></span><span class="map-road road-three"></span>
+              <span class="map-water"></span><span class="map-empty-label">Connect a device to view location</span>
+            </div>
+            <div class="location-footer"><div><strong>No location available</strong><span>Connect a device to begin</span></div><span class="location-time">—</span></div>
+          </article>
+        </section>
+
+        <section class="dashboard-content-grid lower-grid">
+          <article class="dashboard-panel recent-panel">
+            <div class="dashboard-panel-header"><div><h2>Recent activity</h2><p>Latest events from your device</p></div><a class="dashboard-link" href="#activity">View all</a></div>
+            <div class="recent-empty">No recent activity. Connect a device to start receiving updates.</div>
+          </article>
+
+          <article class="dashboard-panel quick-panel" id="settings">
+            <div class="dashboard-panel-header"><div><h2>Quick actions</h2><p>Manage your monitoring setup</p></div></div>
+            <div class="quick-actions"><a href="access-request.html"><span>▣</span><div><strong>Manage devices</strong><small>Connected devices and sync</small></div><b>›</b></a><a href="#location"><span>⌖</span><div><strong>Location history</strong><small>Review places and routes</small></div><b>›</b></a><a href="https://wa.me/+17078914174"><span>?</span><div><strong>Get support</strong><small>Talk to our support team</small></div><b>›</b></a></div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
